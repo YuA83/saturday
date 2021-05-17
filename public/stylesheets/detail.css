@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+    color: #E8CBC0;
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3a6186, #89253e) no-repeat;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3a6186, #89253e) no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#kakao-talk-channel-chat-button {
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+body {
+    height: 150%;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.headerArea {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.container {
+    min-height: 100%;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#detailcontainer {
+    position: absolute;
+    width: 95%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    font-family: "Pangolin", "Gaegu", cursive;
+    padding: 1rem;
+}
+
+#detailcontainer h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 1rem;
+    padding: 0 0 20px 0;
+    color: #FFC952;
+}
+
+.info {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #47b8e0;
+}
+
+.info span {
+    padding-right: 1.5rem;
+}
+
+.writeBoard {
+    margin: 2rem;
+    font-size: 3rem;
+}
+
+.btn {
+    float: right;
+}
+
+.btn span a {
+    text-decoration: none;
+    color: #adadad;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+}
+.btn span a:hover {
+    color: #47b8e0;
+    font-weight: bold;
+}
+
+#comments_area form fieldset label {
+    margin-top: 5rem;
+}
+.comments {
+    width: 90%;
+    border: 1px solid #adadad;
+}
+#commentArea .commentBtn {
+    border: none;
+    margin: 1rem;
+}
+#commentArea .commentBtn:hover {
+    color: #47b8e0;
+    font-weight: bold;
+}
+
+.commentTxt {
+    font-size: 2.2rem;
+}
+
+.commentBtn a {
+    text-decoration: none;
+    color: #adadad;
+    font-size: 1.5rem;
+}
+.commentBtn a:hover {
+    color: #47b8e0;
+    font-weight: bold;
+}
+
+.commentInfo {
+    color: #47b8e0;
+    margin-top: 2rem;
+}
+
+img {
+    max-width: 480;
+    max-height: 480;
+}

@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#footer {
+    margin-top: 10%;
+    position: absolute;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#reviewlist {
+    position: absolute;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    font-family: "Pangolin", "Gaegu", cursive;
+    padding: 1rem;
+}
+
+#reviewlist h1 {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 0 20px 0;
+    color: #FFC952;
+}
+
+.write {
+    text-align: right;
+    padding: 0 0 20px 0;
+}
+.write a {
+    color: #adadad;
+    font-size: 20px;
+}
+.write a:hover {
+    color: #FFC952;
+    font-weight: bold;
+}
+
+table {
+    border: none;
+    border-bottom: #adadad;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.trTitle {
+    color: #47b8e0;
+    font-weight: 700;
+}
+
+td {
+    padding: .3rem;
+}
+
+td a {
+    color: black;
+}
+td a:hover {
+    color: #FFC952;
+    font-weight: bold;
+}
+
+.num-panel {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.num-panel a {
+    color: #47b8e0;
+}
+.num-panel a:hover {
+    color: #00abe9;
+    font-weight: bold;
+}

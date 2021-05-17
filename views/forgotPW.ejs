@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>SATURDAY</title>
+        <link rel="shortcut icon" href="/images/favicon.ico">
+        <link rel="icon" href="/images/favicon.ico">
+  
+      <link rel='stylesheet' href='/stylesheets/forgot.css' />
+      <link rel="stylesheet" href="/stylesheets/footer.css">
+      <script src="/javascripts/jquery-3.5.1.min.js"></script>
+    </head>
+  
+    <body>
+        <div>
+            <header id="fixHeader"></header>
+            <div id="forgot">
+                <h1>Forgot your PASSWORD?</h1>
+                <form action="/forgot/pw" method="POST" id="forgotIdForm" name="forgotID">
+                    <div class="inp_section">
+                        <input type="text" id="id" name="id" maxlength="15" autocomplete="off" required>
+                        <span class="msg" id="id_msg"></span>
+                        <label>ID</label>
+                    </div>
+            
+                    <div class="inp_section">
+                        <input type="text" id="email" name="email" maxlength="30" autocomplete="off" placeholder="ex) abc123@gmail.com" required>
+                        <span class="msg" id="email_msg"></span>
+                        <label>E-MAIL</label>
+                        <button type="button" id="send_num">Send AuthNum</button>
+                    </div>
+
+                    <div class="inp_section">
+                        <input type="text" id="numCheck" name="numCheck" required>
+                        <span class="msg" id="auth_msg"></span>
+                        <label>Auth Number</label>
+                    </div>
+    
+                    <div class="btn">
+                        <button type="submit" id="findPwBtn">FIND</button>
+                    </div>
+                </form>
+                <div class="txt">
+                    Forgot your
+                    <a href="/forgot/id" id="forgot_pw">ID</a> ?
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="contain">
+                <div class="foot-info">
+                    <address>
+                        (주)내일은 토요일 
+                        <span class="bar">|</span>   
+                        서울 강동구 천호대로 지하 997  
+                        <span class="bar">|</span> 
+                        Tel     : 010-1234-5678 
+                        <span class="bar">|</span> 
+                        E-mail  : tmrwMaster@gmail.com  
+                        <br>
+                        Copyright © 2021 (주)내일은 토요일. All Right Reserved.
+                    </address>
+                </div>	
+                <div
+                    id="kakao-talk-channel-chat-button"
+                    data-channel-public-id="_DiNpK"
+                    data-title="question"
+                    data-size="small"
+                    data-color="mono"
+                    data-shape="pc"
+                    data-support-multiple-densities="true"
+                >
+            </div>			
+        </div>	
+    </footer>  
+
+    <script>
+        window.kakaoAsyncInit = function() {
+          Kakao.Channel.createChatButton({
+            container: '#kakao-talk-channel-chat-button',
+          });
+        };
+      
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'kakao-js-sdk');
+      </script>
+
+      <script src="/javascripts/forgot.js"></script> 
+  </body>
+</html>

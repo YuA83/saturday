@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>SATURDAY</title>
+        <link rel="shortcut icon" href="/images/favicon.ico">
+        <link rel="icon" href="/images/favicon.ico">
+
+        <link rel='stylesheet' href='/stylesheets/users.css' />
+        <script src="/javascripts/jquery-3.5.1.min.js"></script>
+    </head>
+
+    <body>
+        <header id="fixHeader"></header>
+        <div class="wraper">
+            <div id="userslist">
+                <% if(id == 'admin') { %>
+                <h1>Tomorrow Sat Users</h1>
+                <table width = "100%" border="1">
+                    <tr class="trTitle">
+                        <td>USER ID</td>
+                        <td>NAME</td>
+                        <td>BIRTH</td>
+                        <td>TIER</td>
+                        <td>POINT</td>
+                    </tr>
+                    <% for(let i = (page * page_num) - page_num; i < (page * page_num); i++) { %>
+                        <% if(i > leng) { %>
+                            <% i++; %>
+                        <% } else { %>
+                            <% var datas = data[i] %>
+                        <tr>
+                            <td>
+                                <div class="block"> 
+                                    <form method="POST" action="/blacklist/<%= datas.userid %>">
+                                        <input type="hidden" value="<%= datas.userid %>">
+                                        <button type="submit">BLOCK</button>
+                                    </form>
+                                    <%= datas.userid %>
+                                </div>
+                            </td>
+                            <td>
+                                <%= datas.name %>
+                            </td>
+                            <td>
+                                <%= moment(datas.birth).format('YYYY.MM.DD') %>
+                            </td>
+                            <td>
+                                <%= datas.tier %>
+                            </td>
+                            <td>
+                                <%= datas.point %>
+                                <a class="up" href="/users/up/<%= datas.userid %>">[ + ]</a>
+                                <a class="down" href="/users/down/<%= datas.userid %>">[ - ]</a>
+                            </td>
+                        </tr>
+                    <% } } %> 
+                </table>
+
+                <div class="num-panel">
+                    <% for(var j = 0; j < data.length / page_num; j++) { %>
+                    <span class="num" id="<%= j+1 %>">[
+                        <a href="/users/<%= j + 1 %>">
+                            <%= j + 1 %>
+                        </a>
+                    ]</span>
+                    <% } %>
+                </div>
+
+                <% } else { %>
+                    <script>
+                        alert('ERROR : permission denined');
+                        location.replace('/');
+                    </script>
+                <% } %>
+            </div>
+        </div>
+        <script src="/javascripts/index.js"></script>
+    </body>
+</html> 

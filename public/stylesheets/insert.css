@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.container {
+    padding-top: 150px;
+    font-family: "Pangolin", "Gaegu", cursive;
+}
+
+.userid {
+    margin-top: 2rem;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.useridInfo {
+    margin-left: 2rem;
+    color: #47b8e4;
+    font-size: 2.5rem;
+}
+
+#title {
+    border-radius: 3px;
+    border: none;
+}
+
+.submitBtn {
+    float: right;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+}
+.submitBtn:hover {
+    background-color: #47b8e4;
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,133 @@
+<html>
+    <head>   
+        <title>SATURDAY</title>
+        <link rel="shortcut icon" href="/images/favicon.ico">
+        <link rel="icon" href="/images/favicon.ico">
+        <!-- <meta charset="utf-8"> -->
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        
+        <link rel="stylesheet" href="/stylesheets/detail.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <header id="fixHeader"></header>
+        <div style="width: 100%; height: 150px;"></div>
+        <div id="detailcontainer">
+            <h1><%= data.title %></h1>
+            <div class="info">
+                <span>작성자: <%= data.userid %></span>
+                <span><%= moment(data.date).format('YYYY.MM.DD')%></span>
+                <span>조회수 : <%= data.views %></span>
+            </div>
+
+            <div class="board">
+                <div class="writeBoard" id="contentsummer" name="contentsummer">
+                    <div>
+                        <% let date = new Date(data.date); %>
+                        <img src="/images/uploadImg/<%= data.img %>" alt="" srcset="">
+                    </div>
+                    <%= data.contents %>
+                </div>
+    
+                <div class="btn">
+                    <span><a href="/review/1">List</a></span>
+                    <span><a href="/review/detail/edit/<%= data.idx %>">Edit</a></span>
+                    <span><a href="/review/detail/delete/<%= data.idx %>">Delete</a></span>               
+                </div>
+    
+                <div id="comments_area">
+                    <form action="/review/detail/<%= data.idx %>/comments" method="POST" id="commentsForm" name="commentsForm">
+                        <fieldset <%= !id? 'disabled' : '' %>> <!-- 비 로그인시 비활성화 -->
+                            <div id="commentArea">
+                                <label for="comments">Comment</label>
+                                <input  type="text" id="comment" class="comments" name="comment" placeholder="0/200">
+                            </div>
+                            <sapn>
+                                <button type="submit" id="commentEnterBtn" class="commentBtn" name="commentEnterBtn">Enter</button>
+                            </sapn>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <% data2.forEach((data2, index) => { %>
+                <div>
+                    <table id="showcomment" width = "100%" border="1"> 
+                        <tr>
+                            <div style="color: #FFC952;">
+                                <%= data2.commenter %>
+                                <%= moment(data2.date).format('YYYY.MM.DD')%>
+                            </div>
+                            <div style="color: white;">
+                                <%= data2.comment %>
+                            </div>
+                            <div>
+                                <span id="commentEditBtn" class="commentBtn">
+                                    <!-- <a href="/review/detail/< data2.postid >/commentedit/< data2.commentIdx >">Edit</a> -->
+                                </span>
+                                <span id="commentDelBtn" class="commentBtn">
+                                    <a style="color: #E8CBC0;" href="/review/detail/<%= data2.postid %>/commentdel/<%= data2.commentIdx %>">Delete</a>
+                                </span>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+            <% }); %> 
+        </div>
+
+        <footer id="footer">
+            <div class="contain">
+                <div class="foot-info">
+                    <address>
+                        (주)내일은 토요일 
+                        <span class="bar">|</span>   
+                        서울 강동구 천호대로 지하 997  
+                        <span class="bar">|</span> 
+                        Tel     : 010-1234-5678 
+                        <span class="bar">|</span> 
+                        E-mail  : tmrwMaster@gmail.com  
+                        <br>
+                        Copyright © 2021 (주)내일은 토요일. All Right Reserved.
+                    </address>
+                </div>	
+                <div
+                    id="kakao-talk-channel-chat-button"
+                    data-channel-public-id="_DiNpK"
+                    data-title="question"
+                    data-size="small"
+                    data-color="mono"
+                    data-shape="pc"
+                    data-support-multiple-densities="true"
+                >
+                </div>			
+            </div>	
+        </footer>  
+    
+        <script>
+            window.kakaoAsyncInit = function() {
+              Kakao.Channel.createChatButton({
+                container: '#kakao-talk-channel-chat-button',
+              });
+            };
+          
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+              fjs.parentNode.insertBefore(js, fjs);
+            })(document, 'script', 'kakao-js-sdk');
+          </script>
+
+        <script>
+            const string = document.getElementById('contentsummer').textContent;
+            document.getElementById('contentsummer').innerHTML=string;
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/stylesheets/bootstrap-4.4.1/js/bootstrap.js"></script>
+        <script src="/javascripts/review.js"></script>  
+    </body>
+</html>

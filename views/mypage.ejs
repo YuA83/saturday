@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>SATURDAY</title>
+        <link rel="shortcut icon" href="/images/favicon.ico">
+        <link rel="icon" href="/images/favicon.ico">
+
+        <link rel='stylesheet' href='/stylesheets/mypage.css' />
+        <link rel="stylesheet" href="/stylesheets/footer.css">
+        <script src="/javascripts/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <header id="fixHeader"></header>
+        <div id="mypage">
+            <h1 class="myinfo">MY PAGE</h1>
+            <table class="info" width = "100%" border="1">
+                <tr class="trTitle">
+                    <td>USER ID</td>
+                    <td>NAME</td>
+                    <td>BIRTH</td>
+                    <td>TIER</td>
+                    <td>POINT</td>
+                </tr>
+                <tr>
+                    <td>
+                        <%= data.userid %>
+                    </td>
+                    <td>
+                        <%= data.name %>
+                    </td>
+                    <td>
+                        <%= moment(data.birth).format('YYYY.MM.DD') %>
+                    </td>
+                    <td>
+                        <%= data.tier %>
+                    </td>
+                    <td>
+                        <%= data.point %>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="myReserve" width = "100%" border="1">
+                <h1 class="myreservation">MY RESERVATION</h1>
+                <tr class="trTitle">
+                    <td>TITLE</td>
+                    <td>DATE</td>
+                    <td>PEOPLE</td>
+                    <td>LEVEL</td>
+                    <td>BIRTH</td>
+                </tr>
+                <% data2.forEach((data2, index)=>{ %>
+                    <tr>
+                        <td>
+                            <%= data2.title %>
+                        </td>
+                        <td>
+                            <%= moment(data2.date).format('YYYY.MM.DD, HH:mm') %>
+                        </td>
+                        <td>
+                            <%= data2.people %>
+                        </td>
+                        <td>
+                            <%= data2.level %>
+                        </td>
+                        <td>
+                            <%= data2.birth %>
+                        </td>
+                    </tr>
+                <% }); %> 
+            </table>
+        </div>
+
+        <footer id="footer">
+            <div class="contain">
+                <div class="foot-info">
+                    <address>
+                        (주)내일은 토요일 
+                        <span class="bar">|</span>   
+                        서울 강동구 천호대로 지하 997  
+                        <span class="bar">|</span> 
+                        Tel     : 010-1234-5678 
+                        <span class="bar">|</span> 
+                        E-mail  : tmrwMaster@gmail.com  
+                        <br>
+                        Copyright © 2021 (주)내일은 토요일. All Right Reserved.
+                    </address>
+                </div>	
+                <div
+                    id="kakao-talk-channel-chat-button"
+                    data-channel-public-id="_DiNpK"
+                    data-title="question"
+                    data-size="small"
+                    data-color="mono"
+                    data-shape="pc"
+                    data-support-multiple-densities="true"
+                >
+                </div>			
+            </div>	
+        </footer>  
+
+        <script>
+            window.kakaoAsyncInit = function() {
+            Kakao.Channel.createChatButton({
+                container: '#kakao-talk-channel-chat-button',
+            });
+            };
+        
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+            fjs.parentNode.insertBefore(js, fjs);
+            })(document, 'script', 'kakao-js-sdk');
+        </script>
+
+        <script>
+            $(document).ready(function(e) {
+                $("#fixHeader").load("/header");
+            });
+        </script> 
+    </body>
+</html> 

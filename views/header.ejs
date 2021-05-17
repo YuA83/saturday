@@ -1,0 +1,42 @@
+<head>
+    <title>SATURDAY</title>
+    <link rel='stylesheet' href='/stylesheets/header.css'/>
+    <link rel='stylesheet' href='/stylesheets/font.css'/>
+</head>
+
+<body>
+    <div id="header_container">
+        <div id="logo">
+            <img src="/images/logo.png"/>
+            <span>TOMORROW is SATURDAY</span>
+        </div>
+        
+        <ul>
+            <% if(id == 'admin')  { %>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="/users/1">Users</a></li>
+                <li><a href="/blacklist/1">Black List</a></li>
+            <% } else { %>
+                <% if(id == undefined) { %>
+                    <li><a href="/signin">Sign In</a></li>
+                    <li><a href="/signup">Sign Up</a></li>
+                <% } else { %>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/mypage">MY Page</a></li>
+                    <li id="reserve"><a href="/reserve">Reservation</a></li>
+                <% } %>
+                <li><a href="/reservedlist/1">Reserve List</a></li>
+                <li><a href="/calendar">Calender</a></li>
+                <li><a href="/review/1">Review</a></li>
+                <li><a href="/menu">Menu</a></li>
+            <% } %>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('logo').onclick = function() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</head>

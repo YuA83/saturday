@@ -1,0 +1,81 @@
+<head>
+    <title>SATURDAY</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+  
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/resetpw.css' />
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+</head>
+
+<body>
+    <div>
+        <header id="fixHeader"></header>
+        <div id="repw">
+            <h1>Reset Password</h1>
+            <form action="/forgot/resetpw/<%= userid %>" method="POST" id="resetForm" name="reset">
+                <div class="inp_section">
+                    <input type="password" id="resetPw" name="repw" maxlength="20" autocomplete="off" required>
+                    <span class="msg" id="repw_msg"></span>
+                    <label>PASSWORD</label>
+                </div>
+                <div class="inp_section">
+                    <input type="password" id="rereen" name="rereen" maxlength="20" autocomplete="off" required>
+                    <span class="msg" id="rereen_msg"></span>
+                    <label>RE-ENTER</label>
+                </div>
+
+                <div class="btn">
+                    <button type="submit" id="resetBtn">Reset Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="contain">
+            <div class="foot-info">
+                <address>
+                    (주)내일은 토요일 
+                    <span class="bar">|</span>   
+                    서울 강동구 천호대로 지하 997  
+                    <span class="bar">|</span> 
+                    Tel     : 010-1234-5678 
+                    <span class="bar">|</span> 
+                    E-mail  : tmrwMaster@gmail.com  
+                    <br>
+                    Copyright © 2021 (주)내일은 토요일. All Right Reserved.
+                </address>
+            </div>	
+            <div
+                id="kakao-talk-channel-chat-button"
+                data-channel-public-id="_DiNpK"
+                data-title="question"
+                data-size="small"
+                data-color="mono"
+                data-shape="pc"
+                data-support-multiple-densities="true"
+            >
+            </div>			
+        </div>	
+    </footer>  
+
+    <script>
+        window.kakaoAsyncInit = function() {
+          Kakao.Channel.createChatButton({
+            container: '#kakao-talk-channel-chat-button',
+          });
+        };
+      
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'kakao-js-sdk');
+      </script>
+
+    <script src="/javascripts/resetpw.js"></script> 
+</body>
+</html>
