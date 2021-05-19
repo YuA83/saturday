@@ -75,7 +75,7 @@ router.post('/', (req, res) => {
             client.query(sql_update, ['디오니소스', req.session.userid], () => {console.log("5단계로 상승");});
         }
     });
-    res.redirect('/reservedlist');
+    res.redirect('/reservedlist/1');
 });
 
 
