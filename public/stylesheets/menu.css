@@ -3,7 +3,8 @@ h1 {
     font-weight: 700;
     font-size: 100px;
     text-align: center;
-    color: #FFC952;
+    /* color: #FFC952; */
+    color: #0b7285;
 }
 .headerArea {
     position: fixed;
@@ -22,7 +23,8 @@ h1 {
     font-size: 50px;
     margin-top: 50px;
     margin-left: 40px;
-    color: #DFD86C;
+    /* color: #DFD86C; */
+    color: #ffc952;
 }
 .aa {
     display: flex;

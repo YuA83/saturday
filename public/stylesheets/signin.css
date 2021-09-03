@@ -29,7 +29,8 @@ body {
     text-align: center;
     margin-top: 1rem;
     padding: 0 0 20px 0;
-    color: #FFC952;
+    /* color: #FFC952; */
+    color: #0b7285;
 }
 
 #signin form {

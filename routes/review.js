@@ -80,7 +80,7 @@ router.get('/detail/:idx', (req, res) => {
         const viewsUp = result[0].views + 1;
         client.query('UPDATE board SET views=? WHERE idx=?', [viewsUp, req.params.idx]);
 
-        client.query('SELECT * FROM comments WHERE postid=?', [req.params.idx], (err, reresult) => {
+        client.query('SELECT * FROM comments WHERE postid=? LIMIT 5', [req.params.idx], (err, reresult) => {
             if(err) { console.error(err); }
             res.render('detail', { 
                 data: result[0],

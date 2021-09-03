@@ -1,11 +1,12 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 #footer {
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -14,9 +15,9 @@
     font-family: 'Poor Story', cursive;
     font-size: 20px;
     color: #E8CBC0;
-    background: #3a6186;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3a6186, #89253e) no-repeat;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3a6186, #89253e) no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #2C3E50;
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+    background: linear-gradient(to right, #4CA1AF, #2C3E50);
 }
 #kakao-talk-channel-chat-button {
     float: right;
@@ -25,7 +26,7 @@
 }
 
 body {
-    height: 150%;
+    height: 100%;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
@@ -51,25 +52,28 @@ body::-webkit-scrollbar {
 }
 
 #detailcontainer {
-    position: absolute;
-    width: 95%;
+    /* position: absolute; */
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    align-items: center;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     font-family: "Pangolin", "Gaegu", cursive;
-    padding: 1rem;
 }
 
 #detailcontainer h1 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 2rem;
     margin-top: 1rem;
     padding: 0 0 20px 0;
-    color: #FFC952;
+    /* color: #FFC952; */
+    color: #0b7285;
 }
 
 .info {
     text-align: right;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #47b8e0;
 }
@@ -80,7 +84,7 @@ body::-webkit-scrollbar {
 
 .writeBoard {
     margin: 2rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .btn {
@@ -90,12 +94,16 @@ body::-webkit-scrollbar {
 .btn span a {
     text-decoration: none;
     color: #adadad;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-right: 1.5rem;
 }
 .btn span a:hover {
-    color: #47b8e0;
+    /* color: #47b8e0; */
     font-weight: bold;
+}
+
+fieldset {
+    border: none;
 }
 
 #comments_area form fieldset label {
@@ -103,14 +111,25 @@ body::-webkit-scrollbar {
 }
 .comments {
     width: 90%;
-    border: 1px solid #adadad;
+}
+#commentEnterBtn {
+    outline: none;
+    border: none;
+    color: #adadad;
+    font-size: 1rem;
+    font-family: "Pangolin", "Gaegu", cursive;
+}
+#commentEnterBtn:hover {
+    outline: none;
+    border: none;
+    font-weight: bold;
 }
 #commentArea .commentBtn {
     border: none;
     margin: 1rem;
 }
 #commentArea .commentBtn:hover {
-    color: #47b8e0;
+    /* color: #47b8e0; */
     font-weight: bold;
 }
 
@@ -121,10 +140,10 @@ body::-webkit-scrollbar {
 .commentBtn a {
     text-decoration: none;
     color: #adadad;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .commentBtn a:hover {
-    color: #47b8e0;
+    /* color: #47b8e0; */
     font-weight: bold;
 }
 

@@ -14,15 +14,18 @@ body {
     overflow: hidden;
 }
 
-.wraper {
+/* .wraper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-}
+} */
 
 #emaildiv {
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
     width: 400px;
+    margin: auto;
+    margin-top: 300px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     font-family: "Pangolin", cursive;
@@ -32,7 +35,8 @@ body {
     text-align: center;
     margin-top: 1rem;
     padding: 0 0 20px 0;
-    color: #FFC952;
+    /* color: #FFC952; */
+    color: #0b7285;
 }
 
 #emaildiv form {

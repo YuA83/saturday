@@ -8,7 +8,7 @@
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         
         <link rel="stylesheet" href="/stylesheets/detail.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     </head>
 
     <body>
@@ -56,11 +56,11 @@
                 <div>
                     <table id="showcomment" width = "100%" border="1"> 
                         <tr>
-                            <div style="color: #FFC952;">
+                            <div style="color: #47b8e0;">
                                 <%= data2.commenter %>
                                 <%= moment(data2.date).format('YYYY.MM.DD')%>
                             </div>
-                            <div style="color: white;">
+                            <div>
                                 <%= data2.comment %>
                             </div>
                             <div>
@@ -68,7 +68,7 @@
                                     <!-- <a href="/review/detail/< data2.postid >/commentedit/< data2.commentIdx >">Edit</a> -->
                                 </span>
                                 <span id="commentDelBtn" class="commentBtn">
-                                    <a style="color: #E8CBC0;" href="/review/detail/<%= data2.postid %>/commentdel/<%= data2.commentIdx %>">Delete</a>
+                                    <a style="color: #adadad;" href="/review/detail/<%= data2.postid %>/commentdel/<%= data2.commentIdx %>">Delete</a>
                                 </span>
                             </div>
                         </tr>

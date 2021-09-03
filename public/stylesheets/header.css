@@ -3,10 +3,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: #3a6186;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3a6186, #89253e) no-repeat;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3a6186, #89253e) no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
-    background-size: cover;
+    background: #2C3E50;
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+    background: linear-gradient(to right, #4CA1AF, #2C3E50);
 }
 
 #logo {
@@ -39,9 +38,9 @@ body {
     left: 0;
     right: 0;
 
-    background: #3a6186;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3a6186, #89253e) no-repeat;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3a6186, #89253e) no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+    background: #2C3E50;
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+    background: linear-gradient(to right, #4CA1AF, #2C3E50);
     background-size: cover;
 }
 
